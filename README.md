@@ -67,4 +67,4 @@ Contributions are welcome! If you’d like to improve CryptoScope or fix any iss
 
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
-- [CoinGecko API](https://www.coingecko.com/) (or specify the API used for cryptocurrency data)
+- [CoinGecko API](https://www.coingecko.com/)
