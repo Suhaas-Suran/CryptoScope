@@ -1,0 +1,142 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    color: #ddd;
+    border-bottom: 2px solid #3c3c3c;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.navbar .logo {
+    width: max(12vw, 120px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    opacity: 0; /* Initially hidden */
+    animation: slideIn 0.5s ease forwards 0.3s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.navbar li {
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar li:hover {
+    color: #ffffff;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: max(1vw, 12px);
+    opacity: 0; /* Initially hidden */
+    animation: slideInRight 0.5s ease forwards 0.6s;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.navbar select {
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar select:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar option {
+    background-color: #09005c;
+    color: white;
+}
+
+.navbar button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #393939;
+    background: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar button:hover {
+    transform: scale(1.1);
+    background-color: #f1f1f1;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar button img {
+    width: 13px;
+    transition: transform 0.2s ease;
+}
+
+.navbar button:hover img {
+    transform: rotate(90deg);
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 20px 8%;
+    }
+
+    .navbar button {
+        gap: 8px;
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar button img {
+        width: 12px;
+    }
+}

@@ -1,0 +1,225 @@
+.home {
+    padding: 0px 10px;
+    padding-bottom: 100px;
+    animation: fadeIn 1s ease-in; /* Fade-in animation for the entire home section */
+}
+
+.hero {
+    max-width: 600px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    animation: slideDown 1s ease-in-out; /* Slide-down animation for the hero section */
+}
+
+.hero h1 {
+    font-size: max(4vw, 36px);
+    animation: textPop 0.8s ease; /* Pop animation for the heading */
+}
+
+.hero p {
+    width: 75%;
+    color: #e3e3e3;
+    line-height: 1.5;
+    animation: fadeInText 1s ease 0.5s; /* Delayed fade-in for the paragraph */
+    animation-fill-mode: both;
+}
+
+.hero form {
+    padding: 8px;
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    animation: fadeInUp 1s ease; /* Fade-in and slide-up animation for the form */
+}
+
+.hero input {
+    flex: 1;
+    font-size: 16px;
+    outline: none;
+    border: 2px solid #ddd; /* Light border for a clean look */
+    border-radius: 5px; /* Rounded corners for a smoother appearance */
+    padding: 12px 15px; /* More padding for comfort */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.hero input:hover {
+    border-color: #7927ff; /* Border color change on hover */
+    background-color: #f0f0f0; /* Slight background change on hover */
+}
+
+.hero input:focus {
+    border-color: #7927ff; /* Change border color on focus */
+    box-shadow: 0 0 10px rgba(121, 39, 255, 0.5); /* Enhanced focus highlight */
+    background-color: #fff; /* White background on focus */
+}
+
+.hero input::placeholder {
+    color: #888; /* Lighter placeholder text */
+    opacity: 1; /* Ensure full opacity */
+    transition: color 0.3s ease; /* Smooth transition for placeholder color */
+}
+
+.hero input:focus::placeholder {
+    color: #7927ff; /* Change placeholder color on focus */
+}
+
+
+.hero button {
+    border: none;
+    background: #7927ff;
+    color: white;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Button animations */
+}
+
+.hero button:hover {
+    transform: scale(1.05); /* Slight enlarge on hover */
+}
+
+.crypto-table {
+    max-width: 800px;
+    margin: auto;
+    background: linear-gradient(rgba(84, 3, 255, 0.15), rgba(105, 2, 153, 0.15));
+    border-radius: 15px;
+    animation: fadeIn 1.5s ease; /* Fade-in animation for the table */
+}
+
+.table-layout {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
+    padding: 15px 20px;
+    align-items: center;
+    border-bottom: 1px solid #3c3c3c; /* Updated to 1px solid border */
+    animation: fadeInRow 0.8s ease-in; /* Fade-in animation for table rows */
+}
+
+.table-layout:last-child {
+    border: none;
+}
+
+.table-layout div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.table-layout div img {
+    width: 35px;
+}
+
+.market-cap {
+    text-align: right;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textPop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRow {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.table-layout .green {
+    color: #00D515;
+    text-align: center;
+}
+
+.table-layout .red {
+    color: #ff4646;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .table-layout {
+        grid-template-columns: 0.5fr 3fr 1fr 1fr;
+    }
+
+    .market-cap {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .table-layout div img {
+        width: 25px;
+    }
+
+    .table-layout {
+        font-size: 13px;
+    }
+
+    .hero form input {
+        width: 100px;
+    }
+}
+

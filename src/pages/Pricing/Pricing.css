@@ -1,0 +1,92 @@
+.pricing {
+    padding: 0px 10px;
+    padding-bottom: 100px;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero {
+    max-width: 800px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    animation: slideDown 1s ease-in-out;
+}
+
+.hero h1 {
+    font-size: max(4vw, 36px);
+    animation: textPop 0.8s ease;
+}
+
+.hero p {
+    width: 75%;
+    color: #e3e3e3;
+    line-height: 1.5;
+    animation: fadeInText 1s ease 0.5s;
+    animation-fill-mode: both;
+}
+
+.pricing-plans {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.plan {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 250px;
+    animation: fadeIn 1s ease-in;
+}
+
+.plan h3 {
+    color: #7927ff;
+}
+
+.plan p {
+    color: #e3e3e3;
+}
+
+.plan span {
+    font-size: 1.5rem;
+    color: #00d515;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textPop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,77 @@
+.features {
+    padding: 0 10px;
+    padding-bottom: 100px;
+    animation: fadeIn 1s ease-in;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center;     /* Centers content vertically */
+    flex-direction: column;
+    text-align: center;      /* Centers text */
+}
+
+.hero {
+    max-width: 800px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    animation: slideDown 1s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 36px;
+    animation: textPop 0.8s ease;
+}
+
+.feature {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;   /* Aligns heading and paragraph vertically */
+    align-items: center;      /* Centers content horizontally */
+    gap: 10px;                /* Adds space between heading and paragraph */
+}
+
+.feature h3 {
+    color: #7927ff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #e3e3e3;
+    line-height: 1.5;
+    margin: 0;                /* Removes margin for more consistent alignment */
+    text-align: center;       /* Ensures the text inside <p> is centered */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textPop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
