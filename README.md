@@ -1,3 +1,4 @@
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fcryptoscope.onrender.com)](https://cryptoscope.onrender.com)
 
 # CryptoScope
 
@@ -28,7 +29,7 @@ CryptoScope is a modern, user-friendly web application designed to provide real-
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/cryptoscope.git
+   git clone https://github.com/Suhaas-Suran/CryptoScope.git
    cd cryptoscope
    ```
 
